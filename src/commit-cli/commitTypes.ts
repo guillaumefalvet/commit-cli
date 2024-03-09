@@ -1,0 +1,18 @@
+export const commitTypes: string[] = [
+  'feat',
+  'build',
+  'fix',
+  'revert',
+  'chore',
+  'ci',
+  'docs',
+  'feature',
+  'bugfix',
+  'perf',
+  'refactor',
+  'revert',
+  'style',
+  'test',
+  'translation',
+  'security',
+];
