@@ -10,9 +10,9 @@
 import { Command, Option } from 'commander';
 import chalk from 'chalk';
 import simpleGit from 'simple-git';
-import { commitChanges } from './helpers/commit-helper';
 import figlet from 'figlet';
-import { commitTypes } from './commitTypes';
+import { commitChanges } from './helpers/commit-helper.ts';
+import { commitTypes } from './commitTypes.ts';
 
 const program = new Command();
 

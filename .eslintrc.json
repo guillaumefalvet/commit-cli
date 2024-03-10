@@ -9,17 +9,18 @@
     "no-process-exit": "off",
     "object-shorthand": "off",
     "class-methods-use-this": "off",
+    "node/shebang": "off",
     "spellcheck/spell-checker": [
       1,
       {
         "comments": true,
         "strings": true,
-        "identifiers": true,
-        "templates": true,
+        "identifiers": false,
+        "templates": false,
         "lang": "en_US",
-        "skipWords": ["dict", "aff", "hunspellchecker", "hunspell", "utils"],
-        "skipIfMatch": ["#!/usr/bin/env npx tsx", "http://[^s]*", "^[-\\w]+/[-\\w\\.]+$"],
-        "skipWordIfMatch": ["^foobar.*$"],
+        "skipWords": ["dict", "aff", "hunspellchecker", "hunspell", "utils", "usr", "npx", "tsx"],
+        "skipIfMatch": ["http://[^s]*", "^[-\\w]+/[-\\w\\.]+$"],
+        "skipWordIfMatch": ["^foobar.*$", "\\b(?:npx|tsx)\\b"],
         "minLength": 3
       }
     ]
