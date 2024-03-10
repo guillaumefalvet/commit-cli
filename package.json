@@ -15,10 +15,8 @@
     "prepare": "husky && npm run permission"
   },
   "keywords": [],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "validate-branch-name": {
+    "pattern": "^(main|develop){1}$|^(refactor|feat|fix|hotfix|release)/.+$"
   },
   "lint-staged": {
     "*.{js,ts,json,md}": [
@@ -50,6 +48,7 @@
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "tsx": "^4.7.1",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.2",
+    "validate-branch-name": "^1.3.0"
   }
 }
