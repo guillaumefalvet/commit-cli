@@ -1,6 +1,7 @@
 {
   "name": "commit-cli",
   "version": "1.0.0",
+  "type": "module",
   "description": "A simple cli to commit and push to git",
   "main": "src/commit-cli/index.ts",
   "bin": {
@@ -44,6 +45,7 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-spellcheck": "^0.0.20",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",

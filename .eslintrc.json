@@ -1,6 +1,6 @@
 {
   "extends": ["airbnb", "prettier", "plugin:node/recommended"],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "spellcheck"],
   "rules": {
     "prettier/prettier": "error",
     "no-unused-vars": "warn",
@@ -8,6 +8,20 @@
     "func-names": "off",
     "no-process-exit": "off",
     "object-shorthand": "off",
-    "class-methods-use-this": "off"
+    "class-methods-use-this": "off",
+    "spellcheck/spell-checker": [
+      1,
+      {
+        "comments": true,
+        "strings": true,
+        "identifiers": true,
+        "templates": true,
+        "lang": "en_US",
+        "skipWords": ["dict", "aff", "hunspellchecker", "hunspell", "utils"],
+        "skipIfMatch": ["#!/usr/bin/env npx tsx", "http://[^s]*", "^[-\\w]+/[-\\w\\.]+$"],
+        "skipWordIfMatch": ["^foobar.*$"],
+        "minLength": 3
+      }
+    ]
   }
 }
