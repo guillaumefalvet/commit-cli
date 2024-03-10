@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
 npx validate-branch-name
-npx lint-staged --allow-empty
+npx lint-staged
