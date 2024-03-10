@@ -19,11 +19,23 @@
       1,
       {
         "comments": true,
-        "strings": true,
+        "strings": false,
         "identifiers": false,
         "templates": false,
         "lang": "en_US",
-        "skipWords": ["dict", "aff", "hunspellchecker", "hunspell", "utils", "usr", "npx", "tsx", "bugfix", "perf"],
+        "skipWords": [
+          "dict",
+          "aff",
+          "hunspellchecker",
+          "hunspell",
+          "utils",
+          "usr",
+          "npx",
+          "tsx",
+          "bugfix",
+          "perf",
+          "Jira"
+        ],
         "skipIfMatch": ["http://[^s]*", "^[-\\w]+/[-\\w\\.]+$"],
         "skipWordIfMatch": ["^foobar.*$", "\\b(?:npx|tsx)\\b"],
         "minLength": 3
