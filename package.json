@@ -17,15 +17,8 @@
   "keywords": [],
   "husky": {
     "hooks": {
-      "commit-msg": "npx --no -- commitlint --edit ${1}",
       "pre-commit": "lint-staged"
     }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,md}": [
-      "prettier --write",
-      "git add"
-    ]
   },
   "author": "",
   "license": "ISC",
