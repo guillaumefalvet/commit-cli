@@ -8,7 +8,6 @@
     "c": "src/commit-cli/index.ts"
   },
   "scripts": {
-    "clean": "rm -rf dist",
     "start:commit": "tsx ./src/commit-cli/index.ts",
     "permission": "chmod u+x ./src/commit-cli/index.ts",
     "prettier:write": "prettier --write .",
