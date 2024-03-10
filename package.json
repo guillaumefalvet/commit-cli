@@ -20,7 +20,8 @@
   },
   "lint-staged": {
     "*.{js,ts,json,md}": [
-      "prettier --write"
+      "prettier --write",
+      "eslint"
     ]
   },
   "author": "",
@@ -36,9 +37,9 @@
     "@commitlint/cli": "^19.0.3",
     "@types/figlet": "^1.5.8",
     "@types/node": "^20.11.24",
-    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
     "eslint": "^8.57.0",
-    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
