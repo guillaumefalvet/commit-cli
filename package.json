@@ -10,6 +10,7 @@
   "scripts": {
     "start:commit": "tsx ./src/commit-cli/index.ts",
     "permission": "chmod u+x ./src/commit-cli/index.ts",
+    "lint": "eslint .",
     "prettier:write": "prettier --write .",
     "prettier:check": "prettier --check .",
     "prepare": "husky && npm run permission"
