@@ -23,7 +23,7 @@
         "identifiers": false,
         "templates": false,
         "lang": "en_US",
-        "skipWords": ["dict", "aff", "hunspellchecker", "hunspell", "utils", "usr", "npx", "tsx"],
+        "skipWords": ["dict", "aff", "hunspellchecker", "hunspell", "utils", "usr", "npx", "tsx", "bugfix", "perf"],
         "skipIfMatch": ["http://[^s]*", "^[-\\w]+/[-\\w\\.]+$"],
         "skipWordIfMatch": ["^foobar.*$", "\\b(?:npx|tsx)\\b"],
         "minLength": 3
