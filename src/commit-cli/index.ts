@@ -13,7 +13,6 @@ import simpleGit from 'simple-git';
 import { commitChanges } from './helpers/commit-helper';
 import figlet from 'figlet';
 import { commitTypes } from './commitTypes';
-import { formatFiles } from './helpers/prettier-helper';
 
 const program = new Command();
 
