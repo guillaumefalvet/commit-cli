@@ -1,4 +1,12 @@
 #!/usr/bin/env npx tsx
+
+/**
+ * This script is a CLI tool for creating commit messages in a standard format.
+ * It takes command line options for specifying the type, message, scope, and other details of the commit.
+ * The commit process is handled by the `main` function, which constructs the commit message and performs the commit.
+ * If the commit is not allowed on the current branch, an error message is displayed and the program exits.
+ * If the type or message options are missing, an error message is displayed along with the program's help.
+ */
 import { Command, Option } from 'commander';
 import chalk from 'chalk';
 import simpleGit from 'simple-git';
@@ -6,6 +14,7 @@ import { commitChanges } from './helpers/commit-helper';
 import figlet from 'figlet';
 import { commitTypes } from './commitTypes';
 import { formatFiles } from './helpers/prettier-helper';
+
 const program = new Command();
 
 program
@@ -22,7 +31,10 @@ program
 const options = program.opts();
 const cwd = process.cwd();
 
-// Main function to orchestrate the commit
+/**
+ * The main function that handles the commit process.
+ * @returns {Promise<void>} A promise that resolves when the commit process is complete.
+ */
 async function main() {
   const git = simpleGit(cwd);
   const branch = await git.branch();
@@ -60,8 +72,11 @@ async function main() {
   }
 }
 
-// Not necessary to check for type and message, because i already set them as required in the program
 if (!options.type || !options.message) {
+  /**
+   * Display help and exit if type or message are missing.
+   * @remarks This will print an error message, the program's help, and exit with code 1.
+   */
   console.log(chalk.green(figlet.textSync('Git Commit CLI')));
   console.error(chalk.red('Type and message are required.'));
   program.outputHelp();
@@ -69,8 +84,7 @@ if (!options.type || !options.message) {
 } else {
   main();
 }
-// Not necessary to check for type and message, because i already set them as required in the program
-// Display help if no arguments are provided
+
 if (!process.argv.slice(2).length) {
   console.log(chalk.green(figlet.textSync('Git Commit CLI')));
   program.outputHelp();
