@@ -64,7 +64,6 @@ async function main() {
     // if i use the git.commit(commitMessage), it will now show me the file change, so i will use the commitChanges function
     // but i will keep the git.commit as a comment
     // await git.commit(commitMessage);
-    if (options.prettier) formatFiles();
     commitChanges(commitMessage);
   } else {
     console.log(chalk.bgYellow('Dry run mode, no commit was made.'));
