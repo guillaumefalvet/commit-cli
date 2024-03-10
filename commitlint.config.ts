@@ -1,4 +1,4 @@
-import { commitTypes } from './src/commit-cli/commitTypes';
+import { commitTypes } from './src/commit-cli/commitTypes.ts';
 interface IParsed {
   jiraId?: string;
   type: string;
@@ -15,6 +15,7 @@ module.exports = {
         // Group 3: Scope of the commit (optional)
         // Group 4: Subject of the commit
         // /^(?<jiraId>[a-zA-Z]+-\d+)\s*(?<type>\w+)(?:\((?<scope>.*)\))?\s*:\s*(?<subject>.+)$/, original one, i skipped the JiraId underneath
+        // eslint-disable-next-line node/no-unsupported-features/es-syntax
         /^(?<jiraId>[a-zA-Z]+-\d+)?\s*(?<type>\w+)\s*(?:\((?<scope>.*)\))?\s*:\s*(?<subject>.+)$/,
       headerCorrespondence: ['jiraId', 'type', 'scope', 'subject'],
     },
@@ -23,7 +24,7 @@ module.exports = {
     {
       rules: {
         'header-match-team-pattern': (parsed: IParsed) => {
-          const { jiraId, type, subject } = parsed;
+          const { type, subject } = parsed;
           if (!type || !subject) {
             return [
               false,
