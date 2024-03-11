@@ -40,13 +40,12 @@ header {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-
 }
 
 // Footer styles
-      footer {
-        background-color: $primary-color;
-        color: white;
-        padding: 20px;
-        text-align: center;
-      }
+footer {
+  background-color: $primary-color;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
