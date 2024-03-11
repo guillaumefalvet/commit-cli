@@ -1,6 +1,6 @@
 {
   "*.html": ["prettier --write"],
   "*.{js,ts}": ["prettier --write"],
-  "*.{css,less,scss,sass}": ["stylelint --fix"],
+  "*.{css,less,scss,sass}": ["prettier --write"],
   "*.json": ["prettier --write"]
 }
