@@ -2,5 +2,6 @@
   "*.html": ["prettier --write"],
   "*.{js,ts}": ["prettier --write"],
   "*.{css,less,scss,sass}": ["prettier --write"],
-  "*.json": ["prettier --write"]
+  "*.json": ["prettier --write"],
+  "*.md": ["prettier --write"]
 }
